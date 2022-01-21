@@ -22,14 +22,12 @@ typedef struct _thread_data_t {
       pwmSetMode (PWM_MODE_MS);
       pwmSetRange (2000);
       pwmSetClock (192);
+          
       for(t=0;t<=5;t++){
-
-      pwmWrite(18,1);  //setting duty cycle to 1%
-      usleep(100000);
-      pwmWrite(18,210); //setting duty cycle to 25%
-
-      usleep(100000);
-
+           pwmWrite(18,1);  //setting duty cycle to 1%
+           usleep(100000);
+           pwmWrite(18,210); //setting duty cycle to 25%
+           usleep(100000);
      }
      pwmWrite(18,0);
  pthread_exit(NULL);
